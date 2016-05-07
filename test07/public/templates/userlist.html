@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Profile Pic</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Education</th>
+        <th>Mobile No</th>
+        <th>Created On</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in user_list" >
+      <td><img class="profileImage" ng-src="{{user.avatar}}"></td>
+        <td>{{user.name}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.education}}</td>
+        <td>{{user.mobile_no}}</td> 
+        <td>{{user.created_on | date : 'mediumDate'}}</td>        
+        <td><span class="btn btn-primary" ui-sref="edit-user({user_id:user.id})"> Edit</span> <span class="btn btn-danger" ng-click="deleteUser(user)">Delete</span></td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,35 @@
+<html >
+<head>
+<meta charset="UTF-8">
+<title>UserManagement</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="
+https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="stylesheets/style.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>  
+<script src="javascripts/config/routes.js"></script>
+<script src="javascripts/controllers.js"></script>
+</head>
+<body >
+<div ng-app="UserManagement">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref="users">User Management</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a ui-sref-active="active" ui-sref="users">Home</a></li>
+      <li><a ui-sref-active="active" ui-sref="new-user">New user</a></li>
+    </ul>
+  </div>
+</nav>
+  <!-- Actual view render here -->
+  <div ui-view></div>
+</div>
+
+
+</body>
+</html>
